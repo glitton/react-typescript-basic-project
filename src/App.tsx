@@ -1,8 +1,10 @@
-// import Input from "./components/Input.tsx";
+import { useRef } from "react";
+import Input from "./components/Input.tsx";
 import Button from "./components/Button.tsx";
 import Container from "./components/Container.tsx";
 
 function App() {
+  const input = useRef(null);
   return (
     <main>
       {/* <Input id='name' label='Your name' type='text' />
@@ -20,6 +22,7 @@ function App() {
       >
         Click Me
       </Container>
+      <Input label='Test' id='test' ref={input} />
     </main>
   );
 }
